@@ -587,7 +587,7 @@ function NotificationLibrary:Notify(TitleText, Desc, Delay)
 	end)
 end
 
-print("个人汉化 由于技术力不行可能会出现脚本卡死 无效 失灵 或 某些文本未翻译的问题 请见谅 本脚本所有内容均属于Abysall所有this script all belongs to Abysall team 原脚本受版权保护")
+print("个人汉化 由于技术力不行可能会出现脚本卡死 无效 失灵 或 某些文本未翻译的问题 请见谅 本脚本所有内容均属于Abysall所有this script all belongs to Abysall team 原脚本受版权保护 本脚本免费!")
 Globals.DoorsNotify = function(NotifyOptions)
 	local function PlaySound(Parent, SoundId, Volume)
 		local Sound = Instance.new("Sound")
@@ -3394,7 +3394,7 @@ Tabs.Floors:UpdateWarningBox({
 
 Groupboxes.Floors_Automation = Tabs.Floors:AddRightGroupbox("自动")
 Groupboxes.Floors_Automation:AddToggle("AutoSteerMinecart", {
-	Text = "自动矿车", Default = false, Tooltip = "Automatically completes the minecart chase.",
+	Text = "自动矿车", Default = false, Tooltip = "自动完成矿车追逐 不要转身!!!",
 	Disabled = not Functions.CheckCompatability({"require"}), DisabledTooltip = Globals.IncompatibleMessage
 })
 Groupboxes.Floors_Automation:AddSlider("AutoSteerMinecartTurnDistance", {
@@ -3406,10 +3406,10 @@ Groupboxes.Floors_Automation:AddSlider("AutoSteerMinecartDuckDistance", {
 	Disabled = not Functions.CheckCompatability({"require"}), DisabledTooltip = Globals.IncompatibleMessage
 })
 Groupboxes.Floors_Automation:AddDivider()
-Groupboxes.Floors_Automation:AddToggle("RoomsAutoWalk",             { Text = "自动房间",       Default = false, Tooltip = "自动通关rooms 终不似，少年游。." })
+Groupboxes.Floors_Automation:AddToggle("RoomsAutoWalk",             { Text = "自动房间",       Default = false, Tooltip = "自动通关rooms 终不似，少年游。" })
 Groupboxes.Floors_Automation:AddSlider("RoomsAutoWalkPathfindTimeout", { Text = "最大时间", Min = 0.5, Max = 3, Default = 1, Rounding = 1 })
-Groupboxes.Floors_Automation:AddToggle("RoomsAutoWalkIgnoreA60",    { Text = "无视A60",      Default = false, Tooltip = "无视A60 前提打开无敌模式" })
-Groupboxes.Floors_Automation:AddToggle("RoomsAutoWalkShowPathToggle", { Text = "展示路径",       Default = false, Tooltip = "展示行走路径." })
+Groupboxes.Floors_Automation:AddToggle("RoomsAutoWalkIgnoreA60",    { Text = "无视A60",      Default = false, Tooltip = "无视A60 前提打开无敌模式 那是一个遥远如同梦一样的故事。" })
+Groupboxes.Floors_Automation:AddToggle("RoomsAutoWalkShowPathToggle", { Text = "展示路径",       Default = false, Tooltip = "展示行走路径 可怜再无重现之日" })
 Groupboxes.Floors_Automation:AddToggle("RoomsAutoWalkSpoofFootsteps", {
     Text = "欺骗脚步声", Default = false, Tooltip = "让你的角色像在走.",
     Disabled = not Functions.CheckCompatability({"hookmetamethod", "newcclosure", "getnamecallmethod"}), DisabledTooltip = Globals.IncompatibleMessage
